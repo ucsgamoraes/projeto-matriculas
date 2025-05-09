@@ -7,7 +7,7 @@ namespace projeto_matriculas
     {
         public void Inserir(Matriculado matriculado)
         {
-            using var conn = Conexao.ObterConexao();
+            using var conn = ConexaoDB.ObterConexao();
             using var cmd = conn.CreateCommand();
             cmd.CommandText = @"INSERT INTO Matriculados
                 (Estado, Cidade, IES, Sigla, Organizacao, CategoriaAdministrativa,

@@ -119,7 +119,6 @@
             binArquivo.Size = new Size(35, 23);
             binArquivo.TabIndex = 2;
             binArquivo.UseVisualStyleBackColor = true;
-            binArquivo.Click += this.binArquivo_Click;
             // 
             // btnImportar
             // 
