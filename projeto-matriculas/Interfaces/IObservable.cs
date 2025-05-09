@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace projeto_matriculas.Interfaces
 {
-    public interface IObservable
+    public interface IObservavel<T>
     {
+        void RegistraObservador(IObservador<T> o);
+        void RemoveObservador(IObservador<T> o);
+        void NotificaObservadores();        
     }
 }
