@@ -2,7 +2,7 @@
 
 namespace projeto_matriculas
 {
-    public static class _DB
+    public static class Db
     {
         public static void CriarTabelas()
         {

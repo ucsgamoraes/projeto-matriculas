@@ -38,9 +38,10 @@
             comboBox1 = new ComboBox();
             dataGridView1 = new DataGridView();
             tabPage3 = new TabPage();
-            dataGridView2 = new DataGridView();
-            comboBox3 = new ComboBox();
             button4 = new Button();
+            comboBox3 = new ComboBox();
+            dataGridView2 = new DataGridView();
+            tabPage4 = new TabPage();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             tabPage2.SuspendLayout();
@@ -51,11 +52,13 @@
             // 
             // button1
             // 
-            button1.Location = new Point(6, 6);
+            button1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            button1.AutoSize = true;
+            button1.Location = new Point(191, 171);
             button1.Name = "button1";
-            button1.Size = new Size(367, 54);
+            button1.Size = new Size(343, 33);
             button1.TabIndex = 1;
-            button1.Text = "button1";
+            button1.Text = "Importar";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
@@ -64,6 +67,7 @@
             tabControl1.Controls.Add(tabPage1);
             tabControl1.Controls.Add(tabPage2);
             tabControl1.Controls.Add(tabPage3);
+            tabControl1.Controls.Add(tabPage4);
             tabControl1.Location = new Point(12, 12);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
@@ -78,7 +82,7 @@
             tabPage1.Padding = new Padding(3);
             tabPage1.Size = new Size(768, 398);
             tabPage1.TabIndex = 0;
-            tabPage1.Text = "tabPage1";
+            tabPage1.Text = "Importar";
             tabPage1.UseVisualStyleBackColor = true;
             // 
             // tabPage2
@@ -93,7 +97,7 @@
             tabPage2.Padding = new Padding(3);
             tabPage2.Size = new Size(768, 398);
             tabPage2.TabIndex = 1;
-            tabPage2.Text = "tabPage2";
+            tabPage2.Text = "Totais";
             tabPage2.UseVisualStyleBackColor = true;
             // 
             // button3
@@ -125,7 +129,6 @@
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(219, 23);
             comboBox2.TabIndex = 3;
-            comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
             // 
             // comboBox1
             // 
@@ -136,7 +139,6 @@
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(215, 23);
             comboBox1.TabIndex = 2;
-            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged_1;
             // 
             // dataGridView1
             // 
@@ -145,7 +147,6 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(756, 321);
             dataGridView1.TabIndex = 0;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // tabPage3
             // 
@@ -157,27 +158,8 @@
             tabPage3.Padding = new Padding(3);
             tabPage3.Size = new Size(768, 398);
             tabPage3.TabIndex = 2;
-            tabPage3.Text = "tabPage3";
+            tabPage3.Text = "Ranking";
             tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView2
-            // 
-            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Location = new Point(6, 71);
-            dataGridView2.Name = "dataGridView2";
-            dataGridView2.Size = new Size(756, 321);
-            dataGridView2.TabIndex = 1;
-            // 
-            // comboBox3
-            // 
-            comboBox3.AllowDrop = true;
-            comboBox3.IntegralHeight = false;
-            comboBox3.Items.AddRange(new object[] { "Ead", "Presencial" });
-            comboBox3.Location = new Point(6, 6);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(215, 23);
-            comboBox3.TabIndex = 3;
-            comboBox3.SelectedIndexChanged += comboBox3_SelectedIndexChanged;
             // 
             // button4
             // 
@@ -189,6 +171,34 @@
             button4.UseVisualStyleBackColor = true;
             button4.Click += button4_Click;
             // 
+            // comboBox3
+            // 
+            comboBox3.AllowDrop = true;
+            comboBox3.IntegralHeight = false;
+            comboBox3.Items.AddRange(new object[] { "Ead", "Presencial" });
+            comboBox3.Location = new Point(6, 6);
+            comboBox3.Name = "comboBox3";
+            comboBox3.Size = new Size(215, 23);
+            comboBox3.TabIndex = 3;
+            // 
+            // dataGridView2
+            // 
+            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView2.Location = new Point(6, 71);
+            dataGridView2.Name = "dataGridView2";
+            dataGridView2.Size = new Size(756, 321);
+            dataGridView2.TabIndex = 1;
+            // 
+            // tabPage4
+            // 
+            tabPage4.Location = new Point(4, 24);
+            tabPage4.Name = "tabPage4";
+            tabPage4.Padding = new Padding(3);
+            tabPage4.Size = new Size(768, 398);
+            tabPage4.TabIndex = 3;
+            tabPage4.Text = "Acesso rápido";
+            tabPage4.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -199,6 +209,7 @@
             Text = "Form1";
             tabControl1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
+            tabPage1.PerformLayout();
             tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             tabPage3.ResumeLayout(false);
@@ -220,5 +231,6 @@
         private ComboBox comboBox3;
         private DataGridView dataGridView2;
         private Button button4;
+        private TabPage tabPage4;
     }
 }

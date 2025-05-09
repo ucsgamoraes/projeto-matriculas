@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "projeto-matriculas": {
+      "commandName": "Project",
+      "hotReloadEnabled": false,
+      "nativeDebugging": true
+    }
+  }
+}

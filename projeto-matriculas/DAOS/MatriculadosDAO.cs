@@ -41,7 +41,6 @@ namespace projeto_matriculas
             cmd.ExecuteNonQuery();
         }
 
-        //Total de alunos matriculados (no Brasil) por ano
         public TotaisAnuais ObterTotaisAnuais()
         {
             const string sql = @"
@@ -71,8 +70,6 @@ namespace projeto_matriculas
             }
             return null;
         }
-
-        //Total de alunos matriculados (no Brasil) por ano, com a possibilidade de escolher a modalidade (EaD ou Presencial)
         public TotaisAnuais ObterTotaisAnuaisPorModalidade(string modalidade)
         {
             const string sql = @"
@@ -105,12 +102,12 @@ namespace projeto_matriculas
             return null;
         }
 
-        //Ranking de cursos em 2022 (10 cursos com maior número de matrículas no Brasil)
         public List<CursoTotal> ObterTopCursos2022(int topN = 10)
         {
             const string sql = @"
                 SELECT nomecurso, SUM(matriculas2022) AS total_2022
                 FROM matriculados
+                WHERE matriculas2022 > 0
                 GROUP BY nomecurso
                 ORDER BY total_2022 DESC
                 LIMIT @TopN;";
@@ -131,13 +128,12 @@ namespace projeto_matriculas
             return lista;
         }
 
-        //Ranking de cursos em 2022 (10 cursos com maior número de matrículas no Brasil), com a possibilidade de escolher a modalidade (EaD ou Presencial)
         public List<CursoTotal> ObterTopCursos2022PorModalidade(string modalidade, int topN = 10)
         {
             const string sql = @"
                 SELECT nomecurso, SUM(matriculas2022) AS total_2022
                 FROM matriculados
-                WHERE modalidade = @Modalidade
+                WHERE modalidade = @Modalidade AND matriculas2022 > 0
                 GROUP BY nomecurso
                 ORDER BY total_2022 DESC
                 LIMIT @TopN;";
@@ -193,7 +189,6 @@ namespace projeto_matriculas
         }
     }
 
-    // DTOs para retorno das consultas
     public class TotaisAnuais
     {
         public long Ano2014 { get; set; }
@@ -210,12 +205,9 @@ namespace projeto_matriculas
     {
         public string Estado { get; set; }
     }
-
     public class CursoTotal
     {
         public string NomeCurso { get; set; }
         public long Total2022 { get; set; }
     }
-
-
 }
