@@ -8,6 +8,10 @@ namespace projeto_matriculas.Models
 {
     public class Consulta
     {
-        public List<string> resultados { get; set; }
+        public List<string> Resultados { get; set; }
+        public Consulta()
+        {
+            Resultados = new List<string>();
+        }
     }
 }

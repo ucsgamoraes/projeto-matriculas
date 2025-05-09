@@ -25,5 +25,9 @@ namespace projeto_matriculas.Controllers
             _importarModel.ImportarArquivo();
             _consultarModel.ConsultarAnosDisponiveis();
         }
+        public void Consultar()
+        {
+            _consultarModel.Consultar();
+        }
     }
 }

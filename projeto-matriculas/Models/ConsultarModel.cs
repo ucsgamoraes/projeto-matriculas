@@ -18,6 +18,8 @@ namespace projeto_matriculas.Models
         public ConsultarModel()
         {
             _observadores = new List<IObservador<ConsultarModel>>();
+            Consulta1 = new Consulta();
+            Consulta2 = new Consulta();
         }
 
         public void NotificaObservadores()
@@ -45,6 +47,25 @@ namespace projeto_matriculas.Models
 
         public void Consultar()
         {
+            Consulta2 = Consulta1;
+
+            MatriculadosDAO DAO = new MatriculadosDAO();
+
+            var matriculados = DAO.Consultar(Filtros);
+
+            if (Filtros.TipoConsulta == TipoConsulta.TotalAlunos)
+            {
+                Consulta1.Resultados.Add("Total Matriculados");
+                Consulta1.Resultados.Add(matriculados.Count.ToString());
+            }
+            else if (Filtros.TipoConsulta == TipoConsulta.Ranking)
+            {
+                Consulta1.Resultados.Add("Ranking de cursos");
+                for (int i = 0; i < 10; i++) {
+                    Consulta1.Resultados.Add($"{matriculados[i].NomeCurso} - {matriculados[i].Grau} - {matriculados[i].Modalidade}");
+                }
+            }            
+
             NotificaObservadores();
         }
     }

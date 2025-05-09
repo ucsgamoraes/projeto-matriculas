@@ -39,11 +39,11 @@
             panel1 = new Panel();
             label2 = new Label();
             label1 = new Label();
-            dataGridView2 = new DataGridView();
-            dataGridView1 = new DataGridView();
+            dgvConsulta2 = new DataGridView();
+            dgvConsulta1 = new DataGridView();
             grpModalidade = new GroupBox();
-            checkBox2 = new CheckBox();
-            checkBox1 = new CheckBox();
+            ckbEAD = new CheckBox();
+            ckbPresencial = new CheckBox();
             cbAnoFim = new ComboBox();
             label4 = new Label();
             cbAnoIni = new ComboBox();
@@ -56,8 +56,8 @@
             tabPage1.SuspendLayout();
             tabPage2.SuspendLayout();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvConsulta2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvConsulta1).BeginInit();
             grpModalidade.SuspendLayout();
             gbTipoConsulta.SuspendLayout();
             SuspendLayout();
@@ -144,8 +144,8 @@
             // 
             panel1.Controls.Add(label2);
             panel1.Controls.Add(label1);
-            panel1.Controls.Add(dataGridView2);
-            panel1.Controls.Add(dataGridView1);
+            panel1.Controls.Add(dgvConsulta2);
+            panel1.Controls.Add(dgvConsulta1);
             panel1.Location = new Point(6, 130);
             panel1.Name = "panel1";
             panel1.Size = new Size(678, 406);
@@ -169,26 +169,26 @@
             label1.TabIndex = 11;
             label1.Text = "Consulta 1";
             // 
-            // dataGridView2
+            // dgvConsulta2
             // 
-            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Location = new Point(10, 225);
-            dataGridView2.Name = "dataGridView2";
-            dataGridView2.Size = new Size(665, 177);
-            dataGridView2.TabIndex = 10;
+            dgvConsulta2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvConsulta2.Location = new Point(10, 225);
+            dgvConsulta2.Name = "dgvConsulta2";
+            dgvConsulta2.Size = new Size(665, 177);
+            dgvConsulta2.TabIndex = 10;
             // 
-            // dataGridView1
+            // dgvConsulta1
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(10, 24);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(665, 177);
-            dataGridView1.TabIndex = 9;
+            dgvConsulta1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvConsulta1.Location = new Point(10, 24);
+            dgvConsulta1.Name = "dgvConsulta1";
+            dgvConsulta1.Size = new Size(665, 177);
+            dgvConsulta1.TabIndex = 9;
             // 
             // grpModalidade
             // 
-            grpModalidade.Controls.Add(checkBox2);
-            grpModalidade.Controls.Add(checkBox1);
+            grpModalidade.Controls.Add(ckbEAD);
+            grpModalidade.Controls.Add(ckbPresencial);
             grpModalidade.Location = new Point(484, 7);
             grpModalidade.Name = "grpModalidade";
             grpModalidade.Size = new Size(200, 70);
@@ -196,25 +196,25 @@
             grpModalidade.TabStop = false;
             grpModalidade.Text = "Modalidade";
             // 
-            // checkBox2
+            // ckbEAD
             // 
-            checkBox2.AutoSize = true;
-            checkBox2.Location = new Point(6, 45);
-            checkBox2.Name = "checkBox2";
-            checkBox2.Size = new Size(48, 19);
-            checkBox2.TabIndex = 1;
-            checkBox2.Text = "EAD";
-            checkBox2.UseVisualStyleBackColor = true;
+            ckbEAD.AutoSize = true;
+            ckbEAD.Location = new Point(6, 45);
+            ckbEAD.Name = "ckbEAD";
+            ckbEAD.Size = new Size(48, 19);
+            ckbEAD.TabIndex = 1;
+            ckbEAD.Text = "EAD";
+            ckbEAD.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // ckbPresencial
             // 
-            checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(6, 19);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(79, 19);
-            checkBox1.TabIndex = 0;
-            checkBox1.Text = "Presencial";
-            checkBox1.UseVisualStyleBackColor = true;
+            ckbPresencial.AutoSize = true;
+            ckbPresencial.Location = new Point(6, 19);
+            ckbPresencial.Name = "ckbPresencial";
+            ckbPresencial.Size = new Size(79, 19);
+            ckbPresencial.TabIndex = 0;
+            ckbPresencial.Text = "Presencial";
+            ckbPresencial.UseVisualStyleBackColor = true;
             // 
             // cbAnoFim
             // 
@@ -308,8 +308,8 @@
             tabPage2.PerformLayout();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvConsulta2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvConsulta1).EndInit();
             grpModalidade.ResumeLayout(false);
             grpModalidade.PerformLayout();
             gbTipoConsulta.ResumeLayout(false);
@@ -339,12 +339,12 @@
         private ComboBox cbAnoFim;
         private Label label4;
         private GroupBox grpModalidade;
-        private CheckBox checkBox2;
-        private CheckBox checkBox1;
+        private CheckBox ckbEAD;
+        private CheckBox ckbPresencial;
         private Panel panel1;
         private Label label2;
         private Label label1;
-        private DataGridView dataGridView2;
-        private DataGridView dataGridView1;
+        private DataGridView dgvConsulta2;
+        private DataGridView dgvConsulta1;
     }
 }
