@@ -2,6 +2,7 @@
 using Npgsql;
 
 namespace projeto_matriculas
+{
     public static class Conexao
     {
         public static NpgsqlConnection ObterConexao()

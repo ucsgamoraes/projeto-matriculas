@@ -1,6 +1,6 @@
 ﻿namespace projeto_matriculas
 {
-    public class Matriculado
+    public class Matriculados
     {
         public int Id { get; set; }
         public string Estado { get; set; }

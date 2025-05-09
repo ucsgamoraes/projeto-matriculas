@@ -7,10 +7,9 @@ namespace projeto_matriculas.DB
         /// </summary>
         [STAThread]
         static void Main()
-
         {
 
-            DB.CriarTabelas();
+            _DB.CriarTabelas();
 
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.

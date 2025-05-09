@@ -2,17 +2,17 @@
 
 namespace projeto_matriculas
 {
-    public static class DB
+    public static class _DB
     {
         public static void CriarTabelas()
         {
-            using (var conn = ConexaoDB.ObterConexao())
+            using (var conn = Conexao.ObterConexao())
             using (var cmd = conn.CreateCommand())
             {
                 cmd.CommandText = @"
                     CREATE TABLE IF NOT EXISTS Matriculados (
                         Id SERIAL PRIMARY KEY,
-                        Estado VARCHAR(2) NOT NULL,
+                        Estado VARCHAR(50) NOT NULL,
                         Cidade VARCHAR(100) NOT NULL,
                         IES VARCHAR(255) NOT NULL,
                         Sigla VARCHAR(50),
